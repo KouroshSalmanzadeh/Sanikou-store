@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'kudry';
+    src: url(../fonts/Kudry_web/kudry_weird-headline.woff) format(woff);
+    src: url(../fonts/Kudry_web/kudry_weird-headline.woff2) format(woff2);
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    background-color: #212529;
+}
+
+:root {
+    --grey-color: gainsboro;
+    --dark-back-color: #212529;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    max-width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* 
+nav ul li {
+    font-style: bold;
+} */
+
+nav ul li a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: gainsboro;
+}
+
+nav ul li a lord-icon {
+    color: gainsboro;
+}
