@@ -25,6 +25,7 @@ body {
 :root {
     --grey-color: gainsboro;
     --dark-back-color: #212529;
+    --yellow-color: yellow;
 }
 
 a {
@@ -39,8 +40,67 @@ nav {
     max-width: 100%;
     height: 3rem;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+}
+
+nav .nav-right {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row-reverse;
+}
+
+nav .nav-right .three-line-menu {
+    position: relative;
+    margin-left: 1rem;
+    width: 1.5rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
+
+nav .nav-right .three-line-menu:hover::before,
+nav .nav-right .three-line-menu:hover::after,
+nav .nav-right .three-line-menu:hover span::before {
+    background-color: var(--yellow-color);
+}
+
+nav .nav-right .three-line-menu::before,
+nav .nav-right .three-line-menu::after,
+nav .nav-right .three-line-menu span::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: var(--grey-color);
+    border-radius: 10vw;
+    transition: all ease 0.5s;
+}
+
+nav .nav-right .three-line-menu::before {
+    top: 0;
+}
+
+nav .nav-right .three-line-menu span::before {
+    top: 45%;
+}
+
+nav .nav-right .three-line-menu::after {
+    bottom: 0;
+}
+
+nav .nav-right svg g {
+    transition: all ease 0.1s;
+}
+
+nav .nav-right svg:hover {
+    cursor: pointer;
+}
+
+nav .nav-right svg:hover g {
+    fill: var(--yellow-color);
 }
 
 nav ul {
@@ -50,19 +110,55 @@ nav ul {
     justify-content: space-evenly;
 }
 
-/* 
-nav ul li {
-    font-style: bold;
-} */
-
 nav ul li a {
     font-size: 1.1rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     color: gainsboro;
+    transition: all ease 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--yellow-color);
 }
 
 nav ul li a lord-icon {
     color: gainsboro;
+}
+
+nav .nav-left {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+nav .nav-left svg {
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+nav .nav-left svg g {
+    transition: all ease .1s;
+}
+
+nav .nav-left svg:nth-child(1):hover g {
+    fill: rgb(3, 3, 255);
+}
+
+nav .nav-left svg:nth-child(2):hover g {
+    fill: rgb(255, 221, 3);
+}
+
+nav .nav-left svg:nth-child(3):hover g {
+    fill: rgb(0, 0, 0);
+}
+
+nav .nav-left svg:nth-child(4):hover g {
+    fill: rgba(0, 40, 125, 0.476);
+}
+
+nav .nav-left svg:nth-child(5):hover g {
+    fill: rgb(3, 137, 255);
 }
